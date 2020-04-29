@@ -4,14 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digital marketing agency</title>
-  <link rel="stylesheet" href="{% static 'css/materialize.css' %}">
-  <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+  <title>NAZADB || A digital marketing agency</title>
+  <link rel="shortcut icon" href="{% static 'img/favicon.png' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,600;0,800;1,300;1,400;1,500;1,600;1,800&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'css/styles.min.css' %}">
 </head>
 
 <body>
@@ -19,28 +20,32 @@
  <!-- Start of the navbar -->
 
 <!-- Start of the navbar -->
-  <nav class="white">
-    <div class="container">
-        <div class="nav-wrapper">
-            <a href="{% url 'home' %}" class="brand-logo">
-                <img src="{% static 'img/logo.png' %}" width="150" alt="logo">
-            </a>
-            <ul class="left hide-on-med-and-down small-dash- pr-2">
-                <li><a href="#"><i class="fab fa-1x fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fab fa-1x fa-facebook-square"></i></a></li>
-                <li><a href="#"><i class="fab fa-1x fa-linkedin"></i></a></li>
-            </ul>
-            <ul id="nav-mobile" class="left hide-on-med-and-down pl-2">
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="{% url 'aboutus' %}">About us</a></li>
-                <li><a href="{% url 'service' %}">Services</a></li>
-                <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
-                <li><a href="{% url 'contact' %}">Contact us</a></li>
-                
-            </ul>
-        </div>
-    </div>
-  </nav>
+<nav class="white">
+  <div class="container">
+      <div class="nav-wrapper">
+          <a href="{% url 'home' %}" class="brand-logo">
+              <img src="{% static 'img/logo.png' %}" width="150" alt="logo">
+          </a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger dark-text">
+              <i class="fas fa-bars"></i>
+          </a>
+          <ul id="nav-mobile" class="left hide-on-med-and-down pl-2">
+              <li><a href="{% url 'home' %}">בית</a></li>
+              <li><a href="{% url 'aboutus' %}">עלינו</a></li>
+              <li><a href="{% url 'service' %}">שירותים</a></li>
+              <li><a href="{% url 'portfolio' %}">תיק עבודות</a></li>
+              <li><a href="{% url 'contact' %}">צור קשר</a></li>
+          </ul>
+      </div>
+  </div>
+</nav>
+<ul class="sidenav" id="mobile-demo">
+  <li><a href="{% url 'home' %}">בית</a></li>
+  <li><a href="{% url 'aboutus' %}">עלינו</a></li>
+  <li><a href="{% url 'service' %}">שירותים</a></li>
+  <li><a href="{% url 'portfolio' %}">תיק עבודות</a></li>
+  <li><a href="{% url 'contact' %}">צור קשר</a></li>
+</ul>
 <!-- End of the navbar -->
 
  <!-- End of the navbar -->
@@ -108,7 +113,7 @@
   <div class="container">
     <div class="row">
       <div>
-        <h4 class="heading-one center mb-20">Clients</h4>
+        <h4 class="heading-one center mb-20">לקוחות</h4>
         <p class="center light-dark-text sp-100 pb-50">{{clientquote.quote}}</p>
         <div class="">
           <div class="carousel">
@@ -149,10 +154,10 @@
         <span>{{technique_info.summary}}</span>
       </div>
       {% for tech in technique %}
-      <div class="col l2" data-aos="zoom-out">
+      <div class="col s6 l2" data-aos="zoom-out">
         <div class="technique center">
           <img width="50" src="{{tech.image.url}}" alt="">
-          <span>Branding</span>
+          <span>{{tech.title}}</span>
         </div>
       </div>
       {% endfor %}
@@ -169,41 +174,22 @@
           <a href="{% url 'home' %}">
             <img src="{% static 'img/logo.png' %}" width="180" class="responsive-img" alt="">
           </a>
-          <p>From the world's most trusted businesses to breakout startups, we help create the brand experiences of the
-            future through a creative culture rooted in entrepreneurship and partner collaboration.</p>
-          <span class="right social-icons">
-            <a href="#">
-              <i class="fab fa-1x fa-linkedin"></i>
-            </a>
-            <a href="#">
-              <i class="fab fa-1x fa-twitter"></i>
-            </a>
-            <a href="#">
-              <i class="fab fa-1x fa-instagram"></i>
-            </a>
-            <a href="#">
-              <i class="fab fa-1x fa-facebook-f"></i>
-            </a>
-          </span>
+          <p>מהעסקים המהימנים בעולם ועד סטארט-אפים, אנו עוזרים ביצירת חוויות המותג של העתיד באמצעות תרבות יצירתית המושרשת ביזמות ושיתוף פעולה עם שותפים</p>
         </div>
         <div class="col l3 right right-align">
-          <h6 class="footer-heading mb-2">CONTACT INFO</h6>
-          <p class="mt-1">Creative Nuts Studio 202/B, 18th C Main Rd, HAL 2nd Stage, Kodihalli, Bengaluru, Karnataka
-            560008</p>
-          <p class="mt-1">
-            Email: email@gmail.com<br />
-            Phone: 012 012 103030<br />
-            <a href="#" class="footer-link">View direction</a>
-          </p>
+          <h6 class="footer-heading mb-2">צור קשר עם מידע</h6>
+          <p class="mt-1">רחוב פאולוס הששי 102, קומה 3
+            נצרת, ישראל</p>
+          <p class="mt-1">info@nazadv.com<br/>972-533065330+</p>
         </div>
         <div class="col l3 right right-align">
-          <h6 class="footer-heading mb-2">ADDITIONAL LINKS</h6>
-          <a href="#" class="footer-link">Brand Strategy</a>
-          <a href="#" class="footer-link">Brand Identity</a>
-          <a href="#" class="footer-link">Digital Marketing</a>
-          <a href="#" class="footer-link">Website Design & Development</a>
-          <a href="#" class="footer-link">Design Communication</a>
-          <a href="#" class="footer-link">Video Production</a>
+          <h6 class="footer-heading mb-2">קישורים נוספים</h6>
+          <a href="{% url 'service' %}" class="footer-link">אסטרטגיית מותג</a>
+          <a href="{% url 'service' %}" class="footer-link">זהות מותג</a>
+          <a href="{% url 'service' %}" class="footer-link">שיווק דיגיטלי</a>
+          <a href="{% url 'service' %}" class="footer-link">עיצוב ופיתוח אתרים</a>
+          <a href="{% url 'service' %}" class="footer-link">תקשורת מעוצבת</a>
+          <a href="{% url 'service' %}" class="footer-link">הפקת וידאו</a>
         </div>
       </div>
     </div>
@@ -211,7 +197,7 @@
       <div class="container">
         <div class="row section-padding-a-min">
           <div class="col l12">
-            <span class="footer-p">© 2020 All rights reserved by Creative Nuts</span>
+            <span class="footer-p">© 2020 All rights reserved by NAZADV</span>
           </div>
         </div>
       </div>
@@ -219,8 +205,8 @@
   </footer>
   <!-- End of the footer section -->
 
-  <script src="{% static 'js/materialize.js' %}"></script>
-  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="{% static 'js/main.js' %}"></script>
 </body>
 

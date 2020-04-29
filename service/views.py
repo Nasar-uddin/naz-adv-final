@@ -4,11 +4,11 @@ from .models import Service_Fields, Service_Categories, Service_Tag, Cover, Why_
 
 
 def service(request):
-  cover = Cover.objects.all()
-  service_fields = Service_Fields.objects.all()
-  service_categories = Service_Categories.objects.all()
+  cover = Cover.objects.all()[0]
+  service_fields = Service_Fields.objects.all()[:3]
+  service_categories = Service_Categories.objects.all()[:6]
   service_tag = Service_Tag.objects.all()
-  why_work = Why_Work.objects.all()
+  why_work = Why_Work.objects.all()[:3]
 
   context = {
       'cover': cover,

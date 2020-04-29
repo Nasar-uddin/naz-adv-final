@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	var instances = M.Carousel.init(heroCarousel[1], {
 		dist:0,
 	});
+	var mnv = document.querySelectorAll('.sidenav');
+  	M.Sidenav.init(mnv);
 	AOS.init({
 		// initClassName: 'aos-init', // class applied after initialization
 		// animatedClassName: 'aos-animate', // class applied on animation
