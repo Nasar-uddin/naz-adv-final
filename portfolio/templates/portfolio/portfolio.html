@@ -59,7 +59,7 @@
     <div class="container">
         <div class="row  projects section-padding-a">
             {% for project in projects %}
-            <div class="col l4">
+            <div class="col l4" data-aos="fade-up">
                 <div class="card card-shadow">
                     <div class="card-image">
                         <img class="responsive-img" src="{{project.image.url}}" alt="">
@@ -81,10 +81,10 @@
     <div class="grey lighten-4">
         <div class="container">
             <div class="row flex flex-center section-padding-a-min">
-                <div class="col l9">
+                <div class="col l9" data-aos="fade-up">
                     <h4 class="heading-two">נשמח לשמוע על הפרויקט החדש שלך</h4>
                 </div>
-                <div class="col l3">
+                <div class="col l3" data-aos="fade-up">
                     <a href="{% url 'contact' %}" class="my-btn">התחל פרויקט חדש<i class="fas fa-1x fa-long-arrow-alt-left mr-1"></i></a>
                 </div>
             </div>
