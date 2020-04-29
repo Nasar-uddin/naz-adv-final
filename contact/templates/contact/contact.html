@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+{% load staticfiles %}
+
+<link>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital marketing agency</title>
+<link rel="stylesheet" href="{% static 'css/materialize.css' %}">
+<link rel="stylesheet" href="{% static 'css/aos.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,600;0,800;1,300;1,400;1,500;1,600;1,800&display=swap"
+    rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</link>
+
+<body>
+    <!-- Start of the navbar -->
+    <nav class="white">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="{% url 'home' %}" class="brand-logo">
+                    <img src="{% static 'img/logo.png' %}" width="150" alt="logo">
+                </a>
+                <ul class="left hide-on-med-and-down small-dash- pr-2">
+                    <li><a href="#"><i class="fab fa-1x fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-1x fa-facebook-square"></i></a></li>
+                    <li><a href="#"><i class="fab fa-1x fa-linkedin"></i></a></li>
+                </ul>
+                <ul id="nav-mobile" class="left hide-on-med-and-down pl-2">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'aboutus' %}">About us</a></li>
+                    <li><a href="{% url 'service' %}">Services</a></li>
+                    <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+                    <li><a href="{% url 'contact' %}">Contact us</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End of the navbar -->
+    <!-- Start of the say hello section -->
+    <div class="container">
+        <div class="row section-padding-a-max">
+            <div class="col l8 offset-l2 center">
+                <h1 class="heading-large">{{contactText.heading}}</h1>
+                <p class="paragraph-small">{{contactText.subheading}}</p>
+                <button class="my-btn-primary">info@nazadv.com</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- End of the say hello section -->
+
+    <!-- Start of contacts section -->
+    <div class="bgm-dark">
+        <div class="row flex">
+            <div class="col l6 pa-0">
+                <div id="map"></div>
+            </div>
+            <div class="col l6">
+                <div class="row">
+                    <div class="col l6 bgm-light-dark" data-aos="fade-up">
+                        <div class="center white-text section-padding-a">
+                            <i class="fas fa-2x fa-map-marked-alt"></i>
+                            <h6 class="heading-small">כתובת איש קשר</h6>
+                            <p class="paragraph-small">2 / B, שלב ראשון, שלב מרובה, קודיאלי, בנגלור, קרנטקה</p>
+                        </div>
+                    </div>
+                    <div class="col l6" data-aos="fade-up">
+                        <div class="center white-text section-padding-a">
+                            <i class="fas fa-2x fa-comments"></i>
+                            <h6 class="heading-small">כתובת איש קשר</h6>
+                            <p class="paragraph-small">2 / B, שלב ראשון, שלב מרובה, קודיאלי, בנגלור, קרנטקה</p>
+                        </div>
+                    </div>
+                    <div class="col l6" data-aos="fade-up">
+                        <div class="center white-text section-padding-a">
+                            <i class="fas fa-2x fa-envelope-open"></i>
+                            <h6 class="heading-small">כתובת איש קשר</h6>
+                            <p class="paragraph-small">2 / B, שלב ראשון, שלב מרובה, קודיאלי, בנגלור, קרנטקה</p>
+                        </div>
+                    </div>
+                    <div class="col l6 bgm-light-dark" data-aos="fade-up">
+                        <div class="center white-text section-padding-a">
+                            <i class="fas fa-2x fa-clock"></i>
+                            <h6 class="heading-small">כתובת איש קשר</h6>
+                            <p class="paragraph-small">2 / B, שלב ראשון, שלב מרובה, קודיאלי, בנגלור, קרנטקה</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- end of contacts section -->
+
+<!-- Start of the footer section -->
+    <footer class="bgm-dark">
+        <div class="container">
+            <div class="row section-padding-a">
+                <div class="col l3 right right-align">
+                    <a href="{% url 'home' %}">
+                        <img src="{% static 'img/logo.png' %}" width="180" class="responsive-img" alt="">
+                    </a>
+                    <p>From the world's most trusted businesses to breakout startups, we help create the brand experiences of the future through a creative culture rooted in entrepreneurship and partner collaboration.</p>
+                    <span class="right social-icons">
+                        <a href="#">
+                            <i class="fab fa-1x fa-linkedin"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-1x fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-1x fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-1x fa-facebook-f"></i>
+                        </a>
+                    </span>
+                </div>
+                <div class="col l3 right right-align">
+                    <h6 class="footer-heading mb-2">CONTACT INFO</h6>
+                    <p class="mt-1">Creative Nuts Studio 202/B, 18th C Main Rd, HAL 2nd Stage, Kodihalli, Bengaluru, Karnataka 560008</p>
+                    <p class="mt-1">
+                        Email: email@gmail.com<br/>
+                        Phone: 012 012 103030<br/>
+                        <a href="#" class="footer-link">View direction</a>
+                    </p>
+                </div>
+                <div class="col l3 right right-align">
+                    <h6 class="footer-heading mb-2">ADDITIONAL LINKS</h6>
+                    <a href="#" class="footer-link">Brand Strategy</a>
+                    <a href="#" class="footer-link">Brand Identity</a>
+                    <a href="#" class="footer-link">Digital Marketing</a>
+                    <a href="#" class="footer-link">Website Design & Development</a>
+                    <a href="#" class="footer-link">Design Communication</a>
+                    <a href="#" class="footer-link">Video Production</a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-footer bgm-light-dark">
+            <div class="container">
+                <div class="row section-padding-a-min">
+                    <div class="col l12">
+                        <span class="footer-p">© 2020 All rights reserved by Creative Nuts</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+<!-- End of the footer section -->
+
+
+    <!-- google map script only for contact us page -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIBAmLi7H-IkVHXkrXjwMzTrgBP1IqXIw&callback=initMap">
+    </script>
+    <script>
+        function initMap() {
+            // The location of Uluru
+            var _loc = {lat: 32.7018921, lng: 35.2976923};
+            // The map, centered
+            var map = new google.maps.Map(
+                document.getElementById('map'), {zoom: 10,
+                                                center: _loc,
+                                                streetViewControl: true,
+                                                mapTypeId: google.maps.MapTypeId.ROADMAP
+                                            });
+            var marker = new google.maps.Marker({position: _loc, map: map});
+        }
+        initMap();
+    </script>
+
+
+    <script src="{% static 'js/materialize.js' %}"></script>
+    <script src="{% static 'js/aos.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

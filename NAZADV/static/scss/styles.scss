@@ -1,0 +1,299 @@
+$white: #ffffff;
+$dark: #232323;
+$dark-light: #5A5A5A;
+$primary: #F2994A;
+
+@import "./partials/helper";
+
+body{
+    // font-family: 'Montserrat', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    color: $dark;
+    @include mqmxw(600px){
+        font-size: 10px;
+    }
+}
+.row{
+    margin-bottom: 0;
+}
+
+// nav style
+.nav-wrapper{
+    ul{
+        &.small-dash{
+            position: relative;
+            &::before{
+                content: "";
+                position: absolute;
+                height: 16px;
+                width: 1px;
+                background-color: $dark-light;
+                right: 0;
+                top: 24px;
+            }
+        }
+        li{
+            a{
+                color:$dark-light;
+                opacity: 0.8;
+                font-size: 0.875rem;
+                font-weight: 600;
+                &:hover{
+                    background-color: transparent;
+                    color: $dark;
+                }
+            }
+        }
+    }
+}
+.brand-logo{
+    img{
+        @include mqmiw(900px){
+            margin-top: 0.25rem;
+        }
+    }
+}
+// end of the nav style
+
+// hero area style
+
+.hero-text{
+    @include mqmxw(600px){
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        .hero-title{
+            font-size: 30px !important;
+        }
+    }
+    @include mqmiw(900px){
+        padding-left: 12.5rem;
+    }
+    padding-left: 1rem;
+    .hero-title{
+        font-size: 3rem;
+        font-weight: bold;
+        line-height: 125%;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -1.875rem;
+            height: 0.1875rem;
+            width: 12.5rem;
+            background-color: $primary;
+        }
+    }
+}
+
+// end of the hero area style
+
+// start of the services section style(home page)
+.soft-card{
+    padding: 2.1875rem 2.5rem;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+    img{
+        margin-bottom: 1.25rem;
+    }
+    .card-title{
+        font-weight: 600;
+        font-size: 1.125rem;
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 70px;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: $primary;
+        }
+    }
+    .card-text{
+        color: $dark-light;
+        font-size: 0.875rem;
+    }
+}
+// end of the services section style
+
+// start of the project section style
+.project-card{
+    position: relative;
+    margin-bottom: 1.15rem;
+    overflow: hidden;
+    img{
+        transition: 0.3s ease-out;
+    }
+    &:hover{
+        img{
+            transform: translateY(-90px);
+        }
+        .project-content{
+            transform: translateY(0);
+        }
+    }
+    .project-content{
+        position: absolute;
+        transition: 0.3s ease-out;
+        width: 100%;
+        bottom: 0;
+        transform: translateY(100%);
+        background: $white;
+        padding: 20px;
+        padding: 1.25rem 0rem;
+        
+        .project-title{
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin: 0 0 5px 0;
+        }
+        .project-subtitle{
+            color: $dark-light;
+            font-size: 0.875rem;
+        }
+    }
+}
+// end of the project sectin style
+
+// start of the business section
+.wrapper-vc{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: $white;
+    @include mqmxw(890px){
+        padding-bottom: 2rem;
+    }
+    .business-title{
+        font-size: 2.25rem;
+        line-height: 150%;
+        margin-bottom: 1.25rem;
+    }    
+    .business-subtitle{
+        font-size: 0.9rem;
+        font-weight: 300;
+        line-height: 160%;
+        margin-bottom: 1.25rem;
+    }
+}
+// end of the business section
+
+// start of the technique section
+#technique-section{
+    .col.l4.right-align{
+        h5{
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+        }
+        span{
+            font-size: 0.9rem;
+            font-weight: 300;
+
+        }
+    }
+    .technique{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        img{
+            margin-bottom: 1.25rem;
+        }
+    }
+    .col.l2{
+        border-left: 1px solid rgba($dark,0.2);
+    }
+    .no-border{
+        border-left: none !important;
+    }
+}
+// end of the technique section
+
+// statr of the footer style
+footer{
+    .col.l3{
+        padding-left: 3rem;
+    }
+    color: $white;
+
+    p{
+        font-size: 0.9rem;
+        font-weight: 300;
+        line-height: 150%;
+        color: rgba($white,0.7);
+    }
+    .social-icons{
+        a{
+            color: $white;
+            margin-left: 0.725rem;
+        }
+    }
+    .bottom-footer{
+        background-color: #333333;
+    }
+}
+// end of the footer style
+
+// ---------------------------------------------------------------------------------------------------
+
+// about us page design
+
+
+// banner design
+.banner{
+    color:$white;
+    background-size: cover;
+    background-position: center;
+    .title{
+        font-size: 3.5rem;
+        font-weight: 600;
+        line-height: 150%;
+        text-transform: uppercase;
+        margin: 0;
+    }
+}
+.about-us{
+    background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),url('../img/ban-about.jpg');
+}
+.services{
+    background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),url('../img/ban-project.jpg');
+}
+.portfolio{
+    background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),url('../img/ban-project.jpg');
+}
+// end of the banner design
+
+// start of the planing section
+.planing{
+    color: $white;
+    .planing-heading{
+        font-size: 1.875rem;
+        .planing-number{
+            font-size: 4rem;
+        }
+    }
+}
+// end of the planing section
+
+// project section style
+.projects{
+   .card{
+       .card-image{
+           img{
+               transition: 0.3s;
+               &:hover{
+                filter: brightness(0.5);
+               }
+           }
+       }
+   } 
+}
+
+#map{
+    height: 100%;
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+{% load staticfiles %}
+
+<link>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital marketing agency</title>
+<link rel="stylesheet" href="{% static 'css/materialize.css' %}">
+<link rel="stylesheet" href="{% static 'css/aos.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,600;0,800;1,300;1,400;1,500;1,600;1,800&display=swap"
+    rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</link>
+
+<body>
+<!-- Start of the navbar -->
+    <nav class="white">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="{% url 'home' %}" class="brand-logo">
+                    <img src="{% static 'img/logo.png' %}" width="150" alt="logo">
+                </a>
+                <ul class="left hide-on-med-and-down small-dash- pr-2">
+                    <li><a href="#"><i class="fab fa-1x fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-1x fa-facebook-square"></i></a></li>
+                    <li><a href="#"><i class="fab fa-1x fa-linkedin"></i></a></li>
+                </ul>
+                <ul id="nav-mobile" class="left hide-on-med-and-down pl-2">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'aboutus' %}">About us</a></li>
+                    <li><a href="{% url 'service' %}">Services</a></li>
+                    <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+                    <li><a href="{% url 'contact' %}">Contact us</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!-- End of the navbar -->
+<!-- Start of the banner section -->
+    <div class="row banner about-us section-padding-a">
+        <div class="col l12">
+            <h2 class="center title">עלינו</h2>
+        </div>
+    </div>
+<!-- End of the banner section -->
+
+<!-- Start of the service section -->
+    <div class="container">
+        <div class="row section-padding-a flex flex-center">
+            <div class="col l5 ml-0" data-aos="fade-up">
+                <img class="responsive-img img-rounded" src="{{about_us_text.image_900x650.url}}" alt="">
+            </div>
+            <div class="col l6 pull-l1" data-aos="fade-up">
+                <div class="wraper">
+                    <h4 class="heading-two">{{about_us_text.heading}}</h4>
+                    <p class="paragraph-small light-dark-text">{{about_us_text.subheading}}</p>
+                    <a href="{% url 'service' %}" class="my-btn"><i class="fas fa-1x fa-play-circle ml-1"></i>{{about_us_text.button}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- end of the service section -->
+
+<!-- Start of the plan section -->
+    <div class="bgm-dark">
+        <div class="container">
+            <div class="row planing flex section-padding-a">
+                {% for plan in plans %}
+                <div class="col l4" data-aos="fade-up">
+                    <h4 class="planing-heading op-50">
+                        <span class="planing-number">0{{plan.plan_number}}</span>
+                        <span>{{plan.heading}}</span>
+                    </h4>
+                    <p class="paragraph-small op-50">{{plan.subheading}}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+<!-- End of the plan section -->
+
+<!-- Start of the branding section -->
+    <div class="container section-padding-a">
+        <div class="row">
+            <h4 class="heading-one center pb-50">{{mission.heading}}</h4>
+            <div class="col l8" data-aos="fade-up">
+                <img class="responsive-img img-rounded" src="{{mission.image_one_1000x700.url}}" alt="{{mission.image_one_1000x700}}">
+            </div>
+            <div class="col l4 pl-2" data-aos="fade-up">
+                <img class="responsive-imgs w-99 img-rounded" src="{{mission.image_two_500x730.url}}" alt="{{mission.image_two_500x730}}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col l4" data-aos="fade-up">
+                <h4 class="heading-two">{{mission.subheading}}</h4>
+            </div>
+            <div class="col l4" data-aos="fade-up">
+                <h6 class="paragraph-small p-bold">{{mission.our_approch_heading}}</h6>
+                <p class="paragraph-small light-dark-text">{{mission.our_approch_subheading}}</p>
+            </div>
+            <div class="col l4" data-aos="fade-up">
+                <h6 class="paragraph-small p-bold">{{mission.our_mission_heading}}</h6>
+                <p class="paragraph-small light-dark-text">{{mission.our_mission_subheading}}</p>
+            </div>
+        </div>
+    </div>
+<!-- End of the branding section -->
+
+
+
+<!-- Start of the footer section -->
+    <footer class="bgm-dark">
+        <div class="container">
+            <div class="row section-padding-a">
+                <div class="col l3 right right-align">
+                    <a href="{% url 'home' %}">
+                        <img src="{% static 'img/logo.png' %}" width="180" class="responsive-img" alt="">
+                    </a>
+                    <p>From the world's most trusted businesses to breakout startups, we help create the brand experiences of the future through a creative culture rooted in entrepreneurship and partner collaboration.</p>
+                    <span class="right social-icons">
+                        <a href="#">
+                            <i class="fab fa-1x fa-linkedin"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-1x fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-1x fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-1x fa-facebook-f"></i>
+                        </a>
+                    </span>
+                </div>
+                <div class="col l3 right right-align">
+                    <h6 class="footer-heading mb-2">CONTACT INFO</h6>
+                    <p class="mt-1">Creative Nuts Studio 202/B, 18th C Main Rd, HAL 2nd Stage, Kodihalli, Bengaluru, Karnataka 560008</p>
+                    <p class="mt-1">
+                        Email: email@gmail.com<br/>
+                        Phone: 012 012 103030<br/>
+                        <a href="#" class="footer-link">View direction</a>
+                    </p>
+                </div>
+                <div class="col l3 right right-align">
+                    <h6 class="footer-heading mb-2">ADDITIONAL LINKS</h6>
+                    <a href="#" class="footer-link">Brand Strategy</a>
+                    <a href="#" class="footer-link">Brand Identity</a>
+                    <a href="#" class="footer-link">Digital Marketing</a>
+                    <a href="#" class="footer-link">Website Design & Development</a>
+                    <a href="#" class="footer-link">Design Communication</a>
+                    <a href="#" class="footer-link">Video Production</a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-footer bgm-light-dark">
+            <div class="container">
+                <div class="row section-padding-a-min">
+                    <div class="col l12">
+                        <span class="footer-p">© 2020 All rights reserved by Creative Nuts</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+<!-- End of the footer section -->
+
+
+    <script src="{% static 'js/materialize.js' %}"></script>
+    <script src="{% static 'js/aos.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
