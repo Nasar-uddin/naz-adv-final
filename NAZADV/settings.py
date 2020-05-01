@@ -126,5 +126,5 @@ STATICFILES_DIRS=[
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, '/home/nasar007/naz-adv-final/static')
 STATIC_URL = '/static/'
-MEDIA_ROOT = os.path.join(BASE_DIR, '/home/nasar007/naz-adv-final/media')
+MEDIA_ROOT = os.path.join(BASE_DIR, '/media')
 MEDIA_URL  = '/media/'
