@@ -124,7 +124,7 @@ USE_TZ = True
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR, 'NAZADV/static')
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, '/home/nasar007/naz-adv-final/static')
+STATIC_ROOT = os.path.join(BASE_DIR, '/home/nasar007/naz-adv-final/NAZADV/static')
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, '/home/nasar007/naz-adv-final/media')
 MEDIA_URL  = '/media/'
