@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NAZADB || A digital marketing agency</title>
+  <title>NAZ ADV - Digital Advertising Agency</title>
   <link rel="shortcut icon" href="{{brand.favicon.url}}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -22,18 +22,18 @@
 <!-- Start of the navbar -->
 <nav class="white">
   <div class="container">
-      <div class="nav-wrapper">
+      <div class="nav-wrapper" dir="ltr">
           <a href="{% url 'home' %}" class="brand-logo">
               <img src="{{brand.logo.url}}" width="150" alt="logo">
           </a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger dark-text">
               <i class="fas fa-bars"></i>
           </a>
-          <ul id="nav-mobile" class="left hide-on-med-and-down pl-2">
+          <ul id="nav-mobile" class="right hide-on-med-and-down pl-2">
               <li><a href="{% url 'home' %}">בית</a></li>
-              <li><a href="{% url 'aboutus' %}">עלינו</a></li>
               <li><a href="{% url 'service' %}">שירותים</a></li>
               <li><a href="{% url 'portfolio' %}">תיק עבודות</a></li>
+              <li><a href="{% url 'aboutus' %}">עלינו</a></li>
               <li><a href="{% url 'contact' %}">צור קשר</a></li>
           </ul>
       </div>

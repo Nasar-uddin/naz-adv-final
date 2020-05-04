@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 	var heroCarousel = document.querySelectorAll('.carousel');
+	heroCarousel[0].style.minHeight = '600px';
 	var fw_carousel = M.Carousel.init(heroCarousel[0], {
 		fullWidth: true,
 		indicators: true

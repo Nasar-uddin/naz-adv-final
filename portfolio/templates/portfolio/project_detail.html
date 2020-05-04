@@ -19,18 +19,18 @@
 <!-- Start of the navbar -->
 <nav class="white">
   <div class="container">
-      <div class="nav-wrapper">
+      <div class="nav-wrapper" dir="ltr">
           <a href="{% url 'home' %}" class="brand-logo">
-            <img src="{{brand.logo.url}}" width="150" alt="logo">
+              <img src="{{brand.logo.url}}" width="150" alt="logo">
           </a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger dark-text">
               <i class="fas fa-bars"></i>
           </a>
-          <ul id="nav-mobile" class="left hide-on-med-and-down pl-2">
+          <ul id="nav-mobile" class="right hide-on-med-and-down pl-2">
               <li><a href="{% url 'home' %}">בית</a></li>
-              <li><a href="{% url 'aboutus' %}">עלינו</a></li>
               <li><a href="{% url 'service' %}">שירותים</a></li>
               <li><a href="{% url 'portfolio' %}">תיק עבודות</a></li>
+              <li><a href="{% url 'aboutus' %}">עלינו</a></li>
               <li><a href="{% url 'contact' %}">צור קשר</a></li>
           </ul>
       </div>
