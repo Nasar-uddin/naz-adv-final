@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'p1b!b39m3rew787x#nb^27dq#&xnos^^4b0^gy_-ffz=55_zhv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['nasar007.pythonanywhere.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -124,7 +124,7 @@ USE_TZ = True
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR, 'NAZADV/static')
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, '/home/nasar007/naz-adv-final/NAZADV/static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
-MEDIA_ROOT = os.path.join(BASE_DIR, '/home/nasar007/naz-adv-final/media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL  = '/media/'

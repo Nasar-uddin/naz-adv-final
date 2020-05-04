@@ -1,6 +1,9 @@
 from django.db import models
 
 # Create your models here.
+class Brand(models.Model):
+  logo = models.ImageField(upload_to="images/")
+  favicon = models.ImageField(upload_to="images/")
 
 class Slider(models.Model):
   title = models.CharField(max_length=200)

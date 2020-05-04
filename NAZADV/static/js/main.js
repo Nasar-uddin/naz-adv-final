@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 	var heroCarousel = document.querySelectorAll('.carousel');
-	var instance = M.Carousel.init(heroCarousel[0], {
+	var fw_carousel = M.Carousel.init(heroCarousel[0], {
 		fullWidth: true,
 		indicators: true
 	});

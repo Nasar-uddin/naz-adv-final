@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Digital marketing agency</title>
+  <link rel="shortcut icon" href="{{brand.favicon.url}}">
   <link rel="stylesheet" href="{% static 'css/materialize.css' %}">
   <link rel="stylesheet" href="{% static 'css/aos.css' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
@@ -20,7 +21,7 @@
     <div class="container">
       <div class="nav-wrapper">
         <a href="{% url 'home' %}" class="brand-logo">
-          <img src="{% static 'img/logo.png' %}" width="150" alt="logo">
+          <img src="{{brand.logo.url}}" width="150" alt="logo">
         </a>
         <ul class="left hide-on-med-and-down small-dash pr-2">
           <li><a href="#"><i class="fab fa-1x fa-instagram"></i></a></li>
@@ -92,7 +93,7 @@
       <div class="row section-padding-a">
         <div class="col l3 right right-align">
           <a href="#">
-            <img src="{% static 'img/logo.png' %}" width="180" class="responsive-img" alt="">
+            <img src="{{brand.logo.url}}" width="180" class="responsive-img" alt="">
           </a>
           <p>From the world's most trusted businesses to breakout startups, we help create the brand experiences of the
             future through a creative culture rooted in entrepreneurship and partner collaboration.</p>

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{project.project_detail_heading}}</title>
-  <link rel="shortcut icon" href="{% static 'img/favicon.png' %}">
+  <link rel="shortcut icon" href="{{brand.favicon.url}}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
@@ -21,7 +21,7 @@
   <div class="container">
       <div class="nav-wrapper">
           <a href="{% url 'home' %}" class="brand-logo">
-              <img src="{% static 'img/logo.png' %}" width="150" alt="logo">
+            <img src="{{brand.logo.url}}" width="150" alt="logo">
           </a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger dark-text">
               <i class="fas fa-bars"></i>
@@ -98,7 +98,7 @@
       <div class="row section-padding-a">
         <div class="col l3 right right-align">
           <a href="{% url 'home' %}">
-            <img src="{% static 'img/logo.png' %}" width="180" class="responsive-img" alt="">
+            <img src="{{brand.logo.url}}" width="180" class="responsive-img" alt="">
           </a>
           <p>מהעסקים המהימנים בעולם ועד סטארט-אפים, אנו עוזרים ביצירת חוויות המותג של העתיד באמצעות תרבות יצירתית המושרשת ביזמות ושיתוף פעולה עם שותפים</p>
         </div>

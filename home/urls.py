@@ -7,7 +7,5 @@ import home.views
 
 urlpatterns = [
     path('', home.views.home, name='home'),
-    # path('project/<category>/<int:id>/',
-    #      home.views.project_detail, name='project_detail'),
 
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
