@@ -1,13 +1,16 @@
 from django.shortcuts import render, get_object_or_404
 from home.models import Projects,ProjectsImage,Category,Brand
+from .models import PortfolioBanner
 # Create your views here.
 
 
 def portfolio(request):
   brand = Brand.objects.all()[0]
+  banner = PortfolioBanner.objects.all()[0]
   projects = Projects.objects.all()
   context = {
       'brand':brand,
+      'banner':banner,
       'projects': projects,
      
   }

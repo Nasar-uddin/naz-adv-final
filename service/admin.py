@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Service_Fields, Service_Categories, Service_Tag,Cover, Why_Work
+from .models import Service_Fields, Service_Categories, Service_Tag,Cover, Why_Work,ServiceBanner
 
 # Register your models here.
 
@@ -24,3 +24,4 @@ class Service_TagAdmin(admin.ModelAdmin):
 admin.site.register(Cover)
 admin.site.register(Service_Fields)
 admin.site.register(Why_Work)
+admin.site.register(ServiceBanner)
