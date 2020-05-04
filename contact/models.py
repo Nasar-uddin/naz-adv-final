@@ -7,3 +7,11 @@ class ContactText(models.Model):
     subheading = models.TextField()
     def __str__(self):
         return self.heading
+
+class Contacts(models.Model):
+    address = models.CharField(max_length=250)
+    mobile = models.CharField(max_length=200)
+    email = models.CharField(max_length=200)
+    working_hours = models.CharField(max_length=200)
+    def __str__(self):
+        return self.email
